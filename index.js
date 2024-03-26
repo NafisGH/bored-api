@@ -6,7 +6,7 @@ const btnGo = document.querySelector(".js-btn-go");
 btnGo.addEventListener("click", getActivity);
 
 function getActivity() {
-  fetch("http://www.boredapi.com/api/activity/")
+  fetch("http://www.boredapi.com/api/activity")
     .then((response) => {
       return response.json();
     })
@@ -15,6 +15,7 @@ function getActivity() {
       innerHeader.innerText = "Ура, теперь не скучно 🔥";
       innerText.innerText = value.activity;
       console.log(value.activity);
-    });
+    })
+    .catch(error => console.error('Ошибка при загрузке данных:', error));
 }
 
