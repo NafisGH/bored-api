@@ -33,3 +33,10 @@
     border: none;
     margin-top: 30px;
 }
+.btn-go:hover {
+    cursor: pointer;
+}
+.btn-go:active {
+    color: red;
+    opacity: 0.8;
+}
